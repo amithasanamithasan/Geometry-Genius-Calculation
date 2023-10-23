@@ -23,6 +23,33 @@ console.log(Area);
 const triangleResult=document.getElementById('triangle-man');
 triangleResult.innerText=Area; 
 
+   
+
+
+   
+
+}
+  // triangle are calculation 
+
+function CalculateRectanglearea(){
+    //console.log('amit hasan')
+    //  first rectangle input field
+     const inputField= document.getElementById('rectangle-width');
+     const rectangleValue=inputField.value;
+     const width=parseFloat(rectangleValue);
+     console.log(width);
     
+     //second rectangle input field
+       const secondInputField= document.getElementById('rectangle-length');
+       const rectangleValue2= secondInputField.value;
+       const length = parseFloat(rectangleValue2);
+       console.log(length);
+   
+     const  area= width*length;
+       console.log(area);
+
+       const rectanglecalculationtotal=document.getElementById('rectangle-mann');
+       rectanglecalculationtotal.innerText=area;
+       
 
 }
