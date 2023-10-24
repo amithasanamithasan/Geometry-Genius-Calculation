@@ -19,6 +19,14 @@ function CalculateTrianglearea(){
 
     heightInputField.value='';
 
+    // number input field validation not insert any word or letter string
+
+    if(isNaN(base)||isNaN(height)){
+      alert('Please input the number');
+      return;
+    }
+
+
 const Area1=0.5*base*height;
 
 console.log(Area1);
@@ -50,6 +58,14 @@ function CalculateRectanglearea(){
        const length = parseFloat(rectangleValue2);
        console.log(length);
        secondInputField.value='';
+
+       
+    // number input field validation not insert any word or letter string
+
+    if(isNaN(width)||isNaN(length)){
+      alert('Please input the number');4
+      return;
+    }
    
      const  area2= width*length;
        console.log(area2);
@@ -79,6 +95,12 @@ function CalculateParallelogram(){
    
     console.log(paraheight);
    inputFieldsecond.value='';
+  
+// number input field validation not insert any word or letter string
+ if(isNaN(parabase)||isNaN(paraheight)){
+  alert('please input the number');
+  return;
+ }
 
 
     const area3 = parabase*paraheight;
@@ -87,6 +109,40 @@ function CalculateParallelogram(){
     const parallelogramSpean=document.getElementById('parallelogram-mann');
     parallelogramSpean.innerText=area3;
   
+
+   
     
+
+}
+function calculateEllipseArea(){
+
+
+  const inputFieldellipse= document.getElementById('ellipse-major-radius');
+  const ellipsevalue=inputFieldellipse.value;
+  const ellipse=parseFloat(ellipsevalue);
+  console.log(ellipse);
+
+  inputFieldellipse.value='';
+
+  const inputFieldellipse2= document.getElementById('ellipse-minor-radius');
+  const ellipsevalue2=inputFieldellipse2.value;
+  const ellipse2=parseFloat(ellipsevalue2);
+  console.log(ellipse2);
+
+  inputFieldellipse2.value='';
+    // number input field validation not insert any word or letter string
+
+ if(isNaN(ellipse)|| isNaN(ellipse2)){
+  alert('please input the number');
+  return;
+ }
+
+
+  const ellipsearea= 3.14159*ellipse*ellipse2;
+
+      // console.log(ellipsearea);
+
+      const ellipsetotal=document.getElementById('ellipse-area');
+      ellipsetotal.innerText=ellipsearea;
 
 }
