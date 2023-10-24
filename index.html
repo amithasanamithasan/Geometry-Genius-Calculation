@@ -11,7 +11,17 @@
     <title>GEOMETRY GENIUS</title>
 </head>
 
-
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
 <body>
     <header>
 
@@ -66,25 +76,25 @@
                         </div>
                     </div>
                 </div>
-                <!-- parallelogram card 2 -->
+                <!-- parallelogram card 3 -->
                 <div class=" w-25 bg-base-100 shadow-xl hover:bg-purple-300">
                     <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="p-3">
                         <h2 class="justify-center card-title">Triangle</h2>
-                        <p class="text-center">Area (A) = 0.5 X b X h</p>
+                        <p class="text-center">Area (A) = b X h</p>
                         <p>
-                            <!-- triangle base -->
-                            <input id="triangle-base" type="number" class="border bg-gray-200 text-sm w-16 px-1 "
+                            <!-- parallelogram base -->
+                            <input id="parallelogram-base" type="number" class="border bg-gray-200 text-sm w-16 px-1 "
                                 placeholder="base" name="">
                             <span class="ml-2">cm</span>
-                            <!-- triangle height -->
-                            <input id="triangle-height" type="number" class=" border bg-gray-200 text-sm w-16 px-1"
+                            <!-- parallelogram height -->
+                            <input id="parallelogram-height" type="number" class=" border bg-gray-200 text-sm w-16 px-1"
                                 placeholder="height" name="">
                             <span class="ml-2">cm</span>
                         </p>
-                        <p class="text-2xl">Area: <span id="triangle-man">0</span> cm<sup>2</sup></p>
+                        <p class="text-2xl">Area: <span id="parallelogram-mann">0</span> cm<sup>2</sup></p>
                         <div class="card-actions justify-center p-4">
-                            <button onclick="CalculateTrianglearea()" class=" btn btn-primary">Calculate</button>
+                            <button onclick="CalculateParallelogram()" class=" btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </div>

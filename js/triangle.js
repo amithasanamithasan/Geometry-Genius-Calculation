@@ -9,6 +9,7 @@ function CalculateTrianglearea(){
     const base=parseFloat(baseValue);
     // trpor string thake number er man ta pabo
     console.log(base);
+    baseInputField.value='';
 
 
     const heightInputField=document.getElementById('triangle-height');
@@ -16,12 +17,14 @@ function CalculateTrianglearea(){
     const height=parseFloat(heightvalue);
     console.log(height);
 
-const Area=0.5*base*height;
+    heightInputField.value='';
 
-console.log(Area);
+const Area1=0.5*base*height;
+
+console.log(Area1);
 
 const triangleResult=document.getElementById('triangle-man');
-triangleResult.innerText=Area; 
+triangleResult.innerText=Area1; 
 
    
 
@@ -29,7 +32,7 @@ triangleResult.innerText=Area;
    
 
 }
-  // triangle are calculation 
+  // rectangle are calculation 
 
 function CalculateRectanglearea(){
     //console.log('amit hasan')
@@ -38,18 +41,52 @@ function CalculateRectanglearea(){
      const rectangleValue=inputField.value;
      const width=parseFloat(rectangleValue);
      console.log(width);
+
+     inputField.value='';
     
      //second rectangle input field
        const secondInputField= document.getElementById('rectangle-length');
        const rectangleValue2= secondInputField.value;
        const length = parseFloat(rectangleValue2);
        console.log(length);
+       secondInputField.value='';
    
-     const  area= width*length;
-       console.log(area);
+     const  area2= width*length;
+       console.log(area2);
 
        const rectanglecalculationtotal=document.getElementById('rectangle-mann');
-       rectanglecalculationtotal.innerText=area;
+       rectanglecalculationtotal.innerText=area2;
        
+
+
+
+}
+
+function CalculateParallelogram(){
+   const  inputFieldfirst = document.getElementById('parallelogram-base');
+   const parallelogramaValue=inputFieldfirst.value;
+
+   const parabase =parseFloat(parallelogramaValue);
+
+    console.log(parabase);
+    inputFieldfirst.value='';
+
+
+    const inputFieldsecond=document.getElementById('parallelogram-height');
+    const parallelogramaValue2=inputFieldsecond.value;
+
+    const paraheight=parseFloat(parallelogramaValue2);
+   
+    console.log(paraheight);
+   inputFieldsecond.value='';
+
+
+    const area3 = parabase*paraheight;
+    console.log(area3);
+
+    const parallelogramSpean=document.getElementById('parallelogram-mann');
+    parallelogramSpean.innerText=area3;
+  
+    
 
 }
