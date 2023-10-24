@@ -29,6 +29,8 @@ function CalculateTrianglearea(){
 
 const Area1=0.5*base*height;
 
+addToCalculationEntry('triangle',Area1);
+
 console.log(Area1);
 
 const triangleResult=document.getElementById('triangle-man');
@@ -69,6 +71,7 @@ function CalculateRectanglearea(){
    
      const  area2= width*length;
        console.log(area2);
+       addToCalculationEntry('Rectangle',area2);
 
        const rectanglecalculationtotal=document.getElementById('rectangle-mann');
        rectanglecalculationtotal.innerText=area2;
@@ -105,6 +108,7 @@ function CalculateParallelogram(){
 
     const area3 = parabase*paraheight;
     console.log(area3);
+    addToCalculationEntry('Parallelograma',area3);
 
     const parallelogramSpean=document.getElementById('parallelogram-mann');
     parallelogramSpean.innerText=area3;
@@ -138,11 +142,40 @@ function calculateEllipseArea(){
  }
 
 
-  const ellipsearea= 3.14159*ellipse*ellipse2;
+  const ellipsearea= 3.14*ellipse*ellipse2;
 
       // console.log(ellipsearea);
 
       const ellipsetotal=document.getElementById('ellipse-area');
       ellipsetotal.innerText=ellipsearea;
 
+      // ellipsetotal.areaTwoDecimal('ellipse-area');
+     
+
+      // add to total ellipse name and value
+
+  addToCalculationEntry('ellipse',ellipsearea);
+}
+
+// add to calculation entry
+/**
+ * 1. get the element where i want to add the dynamic HTML
+ * 2. create an element i want to add
+ * 3. if needed add some class
+ * 4. set inner HTML. it could be dynamic Template string 
+ * 5. append the created element as a child of the parent
+ */
+function addToCalculationEntry(areashap,area){
+  // console.log('adding soon');
+  console.log(areashap+'  '+area);
+  const calculationEntry=document.getElementById('calculation-entry');
+
+  //  const count= calculationEntry.childElementCount;
+
+  const p= document.createElement('p');
+// console.log(p);
+  p.classList.add('my-4');
+  p.innerHTML = `${count + 1}. ${areashap} ${area} cm<sup>2</sup> <button class="btn btn-sm btn-success">Convert</button>`;
+ 
+  calculationEntry.appendChild(p);
 }
