@@ -175,7 +175,8 @@ function addToCalculationEntry(areashap,area){
   const p= document.createElement('p');
 // console.log(p);
   p.classList.add('my-4');
-  p.innerHTML = `${count + 1}. ${areashap} ${area} cm<sup>2</sup> <button class="btn btn-sm btn-success">Convert</button>`;
+  // const mishacount=count++
+  p.innerHTML = ` ${areashap}  ${area} cm<sup>2</sup> <button class="btn btn-sm btn-success">Convert</button>`;
  
   calculationEntry.appendChild(p);
 }
